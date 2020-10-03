@@ -11,7 +11,7 @@ answer = 0
 for i in range(num-1):
     candi.append(int(input()))
 
-while dasom <= max(candi):
+while len(candi) != 0 and dasom <= max(candi):
 
     index = 0
     big = 0
