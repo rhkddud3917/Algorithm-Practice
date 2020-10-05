@@ -16,12 +16,14 @@ for i in range(2,end+1):
     for j in range(2*i, end+1, i):
         a[j] = False
 
+my_set = set()
+
 for el in primes:
     x = maxi//(el**2)
     y = mini//(el**2)
     if mini % (el**2) != 0: y += 1
-    y = max(y,0)
     temp = x - y + 1
-    count -= temp
+    for i in range(y,x+1):
+        my_set.add((el**2)*i)
 
-print(count)
+print(count-len(my_set))
